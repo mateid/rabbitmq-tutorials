@@ -2,14 +2,17 @@ using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
+var queueName = args[0];
+var bindingKeys = args.Skip(1).ToArray();
+
 var factory = new ConnectionFactory { HostName = "localhost" };
 
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic);
-// declare a server-named queue
-var queueName = channel.QueueDeclare().QueueName;
+channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic, durable: true);
+
+channel.QueueDeclare(queueName, durable:true, exclusive:false, autoDelete:false);
 
 if (args.Length < 1)
 {
@@ -21,7 +24,7 @@ if (args.Length < 1)
     return;
 }
 
-foreach (var bindingKey in args)
+foreach (var bindingKey in bindingKeys)
 {
     channel.QueueBind(queue: queueName,
                       exchange: "topic_logs",

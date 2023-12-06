@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Folder", "Solution
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmitLogStream", "EmitLogStream\EmitLogStream.csproj", "{F58E4002-04CE-4663-9B6C-8E710153C764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveLogsStream", "ReceiveLogsStream\ReceiveLogsStream.csproj", "{65730C18-E3A0-4CF5-AAB2-74AD5ACB4E4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{497698C7-9D59-478F-9394-265915455F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{497698C7-9D59-478F-9394-265915455F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{497698C7-9D59-478F-9394-265915455F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58E4002-04CE-4663-9B6C-8E710153C764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58E4002-04CE-4663-9B6C-8E710153C764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58E4002-04CE-4663-9B6C-8E710153C764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58E4002-04CE-4663-9B6C-8E710153C764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65730C18-E3A0-4CF5-AAB2-74AD5ACB4E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65730C18-E3A0-4CF5-AAB2-74AD5ACB4E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65730C18-E3A0-4CF5-AAB2-74AD5ACB4E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65730C18-E3A0-4CF5-AAB2-74AD5ACB4E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
